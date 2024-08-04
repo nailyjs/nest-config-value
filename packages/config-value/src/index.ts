@@ -1,3 +1,4 @@
+/* eslint-disable ts/ban-types */
 import { ConfigService, Path } from '@nestjs/config'
 import { type DynamicModule, Global, Module, type OnModuleInit, type Type } from '@nestjs/common'
 
@@ -11,7 +12,16 @@ interface ValueDecoratorMetadata {
   }
 }
 
-// eslint-disable-next-line ts/ban-types
+/**
+ * Inject a `@nestjs/config`'s ConfigService value into a class property.
+ *
+ * @export
+ * @publicApi
+ * @template T The configuration object type.
+ * @param {(Path<T> | (string & {}))} path The configuration path.
+ * @param {unknown} [defaultValue] The default value.
+ * @return {PropertyDecorator}
+ */
 export function Value<T extends object>(path: Path<T> | (string & {}), defaultValue?: unknown): PropertyDecorator {
   return (target, propertyKey) => {
     const oldMetadata = Reflect.getMetadata(VALUE_DECORATOR_METADATA_KEY, target) || {}
