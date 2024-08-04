@@ -14,13 +14,13 @@
     "url": "https://github.com/nailyjs/nest-apple-app-store.git"
   },
   "bugs": {
-    "email": "gczgroup@qq.com",
+    "email": "zero@naily.cc",
     "url": "https://github.com/nailyjs/nest-apple-app-store/issues"
   },
   "keywords": [
     "nestjs",
-    "app-store",
-    "app-store-server"
+    "value",
+    "decorators"
   ],
   "main": "lib/cjs/index.js",
   "module": "lib/esm/index.js",
