@@ -1,0 +1,51 @@
+{
+  "name": "@nailyjs.nest.modules/config-value",
+  "version": "1.0.0",
+  "description": "Nest.js @Value decorator module ⚙️",
+  "author": {
+    "name": "Zero",
+    "email": "zero@naily.cc",
+    "url": "https://github.com/groupguanfang"
+  },
+  "license": "Apache-2.0",
+  "homepage": "https://github.com/nailyjs/nest-apple-app-store",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nailyjs/nest-apple-app-store.git"
+  },
+  "bugs": {
+    "email": "gczgroup@qq.com",
+    "url": "https://github.com/nailyjs/nest-apple-app-store/issues"
+  },
+  "keywords": [
+    "nestjs",
+    "app-store",
+    "app-store-server"
+  ],
+  "main": "lib/cjs/index.js",
+  "module": "lib/esm/index.js",
+  "types": "lib/types/index.d.ts",
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=12"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && rollup -c rollup.config.mjs",
+    "prepublishOnly": "npm run build"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "latest",
+    "registry": "https://registry.npmjs.org"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.1",
+    "@nestjs/config": "^3.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.6",
+    "typescript": "^5.3.3"
+  }
+}

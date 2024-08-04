@@ -1,0 +1,38 @@
+{
+  "packageManager": "pnpm@8.8.0",
+  "author": "Zero <gczgroup@qq.com>",
+  "scripts": {
+    "build": "pnpm -F @nailyjs.nest.modules/config-value build",
+    "lint": "eslint . --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "@nestjs/common": "^10.3.10",
+    "@nestjs/core": "^10.3.10"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "^2.16.1",
+    "@changesets/cli": "^2.27.1",
+    "@commitlint/cli": "^17.8.1",
+    "@commitlint/config-conventional": "^17.8.1",
+    "@commitlint/types": "^17.8.1",
+    "@naiable/rollup-config": "^0.2.1",
+    "@types/glob": "^8.1.0",
+    "@types/node": "^20.11.30",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "eslint": "^8.57.0",
+    "glob": "^11.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.2",
+    "rollup": "^4.20.0",
+    "tslib": "^2.6.3",
+    "typescript": "^5.4.2",
+    "vitest": "^1.4.0"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,md,vue,json,scss,less,html}": [
+      "eslint . --fix"
+    ]
+  }
+}

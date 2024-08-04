@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "module": "commonjs",
+    "declaration": true,
+    "declarationDir": "lib/types",
+    "declarationMap": true,
+    "emitDeclarationOnly": true,
+    "outDir": "lib/types",
+    "sourceMap": true
+  },
+  "include": ["src"]
+}
