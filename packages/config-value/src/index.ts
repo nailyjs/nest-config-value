@@ -11,7 +11,8 @@ interface ValueDecoratorMetadata {
   }
 }
 
-export function Value<T extends object>(path: Path<T>, defaultValue?: unknown): PropertyDecorator {
+// eslint-disable-next-line ts/ban-types
+export function Value<T extends object>(path: Path<T> | (string & {}), defaultValue?: unknown): PropertyDecorator {
   return (target, propertyKey) => {
     const oldMetadata = Reflect.getMetadata(VALUE_DECORATOR_METADATA_KEY, target) || {}
     Reflect.defineMetadata(VALUE_DECORATOR_METADATA_KEY, {

@@ -45,7 +45,7 @@ The `@Value`'s typings is here:
 ```typescript
 import type { Path } from "@nestjs/config";
 
-function Value<T extends object>(path: Path<T>, defaultValue?: unknown): PropertyDecorator
+export function Value<T extends object, ThrowError extends false>(path: Path<T> | (string & {}), defaultValue?: unknown): PropertyDecorator
 ```
 
 The `Path` type util can be infer your configuration object to provide autocompletion:
@@ -62,6 +62,8 @@ export const Value = ConfigValue<ConfigurationObject> // (path: "foo", defaultVa
 ```
 
 And use it across your application.
+
+The `ThrowError` type is used to control whether to throw an error when the configuration value is not found.
 
 ## With zod validation
 
