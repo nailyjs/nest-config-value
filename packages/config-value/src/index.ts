@@ -36,6 +36,7 @@ export class ValueDecoratorModule implements OnModuleInit {
         const value = this.configService.get(path, defaultValue)
         Object.defineProperty(target.prototype, propertyKey, {
           value,
+          writable: true,
         })
       }
     })
