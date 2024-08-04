@@ -1,6 +1,6 @@
 {
   "name": "@nailyjs.nest.modules/config-value",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Nest.js @Value decorator module ⚙️",
   "author": {
     "name": "Zero",
