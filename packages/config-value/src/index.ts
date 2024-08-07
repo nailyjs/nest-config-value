@@ -1,6 +1,6 @@
 /* eslint-disable ts/ban-types */
 import { ConfigService, Path } from '@nestjs/config'
-import { type DynamicModule, Global, Module, type OnModuleInit, type Type } from '@nestjs/common'
+import { type DynamicModule, Global, Module, type Type } from '@nestjs/common'
 
 export const VALUE_DECORATOR_METADATA_KEY = '__value_decorator_metadata_key__'
 const ValueClassSet = new Set<Type>()
@@ -35,10 +35,8 @@ export function Value<T extends object>(path: Path<T> | (string & {}), defaultVa
 
 @Global()
 @Module({})
-export class ValueDecoratorModule implements OnModuleInit {
-  constructor(private readonly configService: ConfigService) {}
-
-  onModuleInit() {
+export class ValueDecoratorModule {
+  constructor(private readonly configService: ConfigService) {
     ValueClassSet.forEach((target) => {
       const metadata = Reflect.getMetadata(VALUE_DECORATOR_METADATA_KEY, target) || {}
       for (const propertyKey in metadata) {
