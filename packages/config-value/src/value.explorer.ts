@@ -10,7 +10,9 @@ export class ValueDecoratorExplorer implements OnModuleInit {
   constructor(
     private readonly configService: ConfigService,
     private readonly discoveryService: DiscoveryService,
-  ) {}
+  ) {
+    this.onModuleInit()
+  }
 
   async onModuleInit() {
     const instanceWrappers: InstanceWrapper[] = [
@@ -30,7 +32,7 @@ export class ValueDecoratorExplorer implements OnModuleInit {
         const value = this.configService.get(path, defaultValue)
         Object.defineProperty(wrapper.instance, propertyKey, {
           value,
-          writable: false,
+          writable: true,
         })
       }
     }
