@@ -1,6 +1,6 @@
 {
   "name": "@nailyjs.nest.modules/config-value",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Nest.js @Value decorator module ⚙️",
   "author": {
     "name": "Zero",
@@ -8,14 +8,14 @@
     "url": "https://github.com/groupguanfang"
   },
   "license": "Apache-2.0",
-  "homepage": "https://github.com/nailyjs/nest-apple-app-store",
+  "homepage": "https://github.com/nailyjs/nest-config-value",
   "repository": {
     "type": "git",
-    "url": "https://github.com/nailyjs/nest-apple-app-store.git"
+    "url": "https://github.com/nailyjs/nest-config-value.git"
   },
   "bugs": {
     "email": "zero@naily.cc",
-    "url": "https://github.com/nailyjs/nest-apple-app-store/issues"
+    "url": "https://github.com/nailyjs/nest-config-value/issues"
   },
   "keywords": [
     "nestjs",
